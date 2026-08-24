@@ -3,6 +3,7 @@ const cors = require('cors');
 const path = require('path');
 
 const errorHandler = require('./middleware/errorHandler');
+const connectDB = require('./config/db');
 const healthRoutes = require('./routes/healthRoutes');
 const authRoutes = require('./routes/auth.routes');
 const userRoutes = require('./routes/user.routes');
@@ -44,6 +45,16 @@ app.use(express.urlencoded({ limit: '50mb', extended: true }));
 
 // ── Static files (uploaded images) ───────────────────────────────────────────
 app.use('/uploads', express.static(path.join(__dirname, '..', 'uploads')));
+
+// ── Ensure DB Connection for Serverless (Vercel) ─────────────────────────────
+app.use(async (req, res, next) => {
+  try {
+    await connectDB();
+  } catch (err) {
+    console.error('DB middleware error:', err);
+  }
+  next();
+});
 
 // ── API routes ────────────────────────────────────────────────────────────────
 app.use('/api/health', healthRoutes);
