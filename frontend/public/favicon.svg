@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="gariGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#022c22" />
+    </linearGradient>
+  </defs>
+  <!-- Background Shield Rounded Squircle -->
+  <rect x="5" y="5" width="90" height="90" rx="28" fill="url(#gariGradient)" stroke="#34d399" stroke-width="3" />
+  
+  <!-- Car Silhouette Icon -->
+  <g fill="#ffffff">
+    <!-- Roof & Windshield -->
+    <path d="M 28 44 C 34 32, 40 28, 52 28 C 64 28, 68 32, 74 44 Z" opacity="0.95" />
+    <!-- Main Car Body -->
+    <path d="M 18 45 L 82 45 C 87 45, 89 48, 89 53 L 89 62 C 89 65, 86 67, 82 67 L 18 67 C 14 67, 11 65, 11 62 L 11 53 C 11 48, 13 45, 18 45 Z" />
+    <!-- Front/Rear Lights -->
+    <rect x="15" y="50" width="8" height="4" rx="2" fill="#fbbf24" />
+    <rect x="77" y="50" width="8" height="4" rx="2" fill="#ef4444" />
+    <!-- Wheels -->
+    <circle cx="28" cy="67" r="10" fill="#1e293b" stroke="#ffffff" stroke-width="3" />
+    <circle cx="72" cy="67" r="10" fill="#1e293b" stroke="#ffffff" stroke-width="3" />
+    <circle cx="28" cy="67" r="4" fill="#ffffff" />
+    <circle cx="72" cy="67" r="4" fill="#ffffff" />
+  </g>
+</svg>
