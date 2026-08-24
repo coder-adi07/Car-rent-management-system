@@ -40,10 +40,3 @@ Thumbs.db
 logs/
 *.log
 
-# Backend uploads (dynamic files from users)
-backend/uploads/cars/*
-backend/uploads/drivers/*
-backend/uploads/customers/*
-!backend/uploads/cars/.gitkeep
-!backend/uploads/drivers/.gitkeep
-!backend/uploads/customers/.gitkeep
